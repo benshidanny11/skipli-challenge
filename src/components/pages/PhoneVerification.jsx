@@ -7,6 +7,7 @@ import phoneIcon from "../../assets/images/phone-icon.png"
 function PhoneVerification() {
   const [phonenumber, setPhonenumber] = useState("");
   const [accessCode, setAccessCode] = useState("");
+  const [activeInput,setActiveInput]=useState("phone-input");
   const [codeVelificationResponse, setCodeVelificationResponse] = useState("");
   const [isCodeValid, setIsCodeValid] = useState(false);
   const [sendingCode, setSendingCode] = useState(false);
@@ -21,18 +22,17 @@ function PhoneVerification() {
 
     setSendingCode(true);
 
-    const response = await axios.post(APIS.SEND_ACCESS_CODE, {
-      phoneNumber: "+250784871958",
+     await axios.post(APIS.SEND_ACCESS_CODE, {
+      phoneNumber: phonenumber,
     });
-
-    console.log(response.data);
     setSendingCode(false);
+    setActiveInput('accesscode-input');
   };
 
   const validateAccessCode = async (e) => {
     e.preventDefault();
-    if (phonenumber.length === 0 || accessCode.length === 0) {
-      alert("Enter valid phone number and access code");
+    if (accessCode.length === 0) {
+      alert("Please provide acess code.");
       return;
     }
 
@@ -66,9 +66,9 @@ function PhoneVerification() {
         </div>
         <h3 className="title-text">Verify your phone number</h3>
         <form>
-          <div className="form-group">
+         {activeInput ==='phone-input'? <div className="form-group">
             <label htmlFor="phonenumber">
-              phone number {" (Start with +)"}
+              Phone number {" (Start with +)"}
             </label>
             <input
               type="tel"
@@ -81,9 +81,7 @@ function PhoneVerification() {
             <button onClick={sendAccessCode} disabled={sendingCode} className="form-button">
               {sendingCode ? "Please wait" : "Send access code"}
             </button>
-          </div>
-          <br />
-          <div className="form-group">
+          </div>:<div className="form-group">
             <label htmlFor="accesscode">
               Access code {" (check your message)"}
             </label>
@@ -93,14 +91,17 @@ function PhoneVerification() {
               placeholder="Access code"
               onChange={(e) => setAccessCode(e.target.value)}
               className="form-text"
+              value={accessCode}
             />
             <button onClick={validateAccessCode} disabled={validatingCode} className="form-button">
               {validatingCode ? "Please wait" : "Verify code"}
             </button>
+            <p className="p-resend">Didn't receive code? <span className="resend" onClick={((e)=>setActiveInput('phone-input'))}>Resend</span></p>
             <p className={isCodeValid?"p-display-success":"p-display-error"}>
               {codeVelificationResponse}
             </p>
-          </div>
+          </div>}
+          
         </form>
       </div>
     </div>

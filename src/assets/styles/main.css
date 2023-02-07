@@ -120,6 +120,7 @@
 .form-group {
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
 .title-text {
@@ -157,6 +158,15 @@
 
 .p-display-success {
     color: var(--color-success);
+}
+
+.p-resend {
+  margin-top: 1rem;
+}
+
+.resend {
+  color: var(--main-color);
+  cursor: pointer;
 }
 
 .table-header {

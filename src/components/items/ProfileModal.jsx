@@ -6,9 +6,6 @@ import FavoriteUsersModalList from "./FavoriteUsersList";
 
 function ProfileModal(props) {
   const myPhoneNumber = localStorage.getItem("phonenumber");
-
-
-
   return (
     <Modal
       {...props}
@@ -42,5 +39,4 @@ function ProfileModal(props) {
     </Modal>
   );
 }
-
 export default ProfileModal;
