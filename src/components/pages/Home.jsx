@@ -77,7 +77,7 @@ function Home() {
 
   const likeGithubUser = async (id) => {
     await axios.post(`${APIs.LIKE_GITHUB_USER}?github_user_id=${id}`, {
-      phone_number: "+250784871958",
+      phone_number: myPhoneNumber,
     });
     fetchFavoriteUsers();
   };
