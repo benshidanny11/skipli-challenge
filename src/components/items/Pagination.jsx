@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactPaginate from 'react-paginate';
 
-function Pagination({handlePageClick, itemsPerPage}) {
+function Pagination({handlePageClick, itemsPerPage, totalRows}) {
   
 
-    const pageCount = Math.ceil(1000 / itemsPerPage);
+    const pageCount = Math.ceil(totalRows / itemsPerPage);
   
  
   
@@ -20,9 +20,9 @@ function Pagination({handlePageClick, itemsPerPage}) {
           previousLabel="<<"
           renderOnZeroPageCount={null}
           containerClassName="pagination"
-          pageLinkClassName="page-num"
-          previousLinkClassName="page-num"
-          nextLinkClassName="page-num"
+          pageClassName="page-num"
+          previousClassName="page-num"
+          nextClassName="page-num"
           activeClassName="active"
         />
       </>

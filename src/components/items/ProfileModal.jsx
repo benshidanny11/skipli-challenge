@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "react-bootstrap/Modal";
 
 import userIcon from "../../assets/images/avatar-img.png";
-import FavoriteUsersModalList from "./FavoriteUserListModal";
+import FavoriteUsersModalList from "./FavoriteUsersList";
 
 function ProfileModal(props) {
   const myPhoneNumber = localStorage.getItem("phonenumber");

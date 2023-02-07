@@ -16,7 +16,7 @@ function App() {
    }else{
     navigate("/verifiphone")
    }
-  },[navigate])
+  },[myPhoneNumber, navigate])
   return (
 
     <Routes>
