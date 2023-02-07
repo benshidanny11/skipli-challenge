@@ -2,44 +2,45 @@
 
 ## Description
 
-> A challenge project
+> A challenge project (Front-end)
 
 ## Built With
 - React js
 
 ## Live demo
 
-[Click here to visit](https://skiplichallenge.herokuapp.com/) as front-end, and [Click here]()
+[Click here to visit](https://skiplichallenge.herokuapp.com/) as front-end, and [Click here](https://skiplibackend.herokuapp.com/) to open backend service
 
 ## Prerequisites
+- Node js [Get it here](https://nodejs.org/en/)
 
-- Node js 10+
-- NPM 6+
+#### 1. Clone this repository or download the Zip folder:"
 
+```bash command
+$ git clone https://github.com/benshidanny11/skipli-challenge.git
+```
+#### 2. Navigate to the location of the folder in your machine:
+```bash command
+you@your-Pc-name:~$ cd <skipli-challenge>
+```
+#### 3. Press Enter to navigate to your local clone.
 
-## Getting Started
+#### 4. Type `npm install` to istall dependencies 
 
-To get a local copy up and running follow these simple example steps.
+#### 4. Type `npm start` to start development server.
 
-- Clone the project.
-
-- Navigate to project folder.
-
-- Run npm install.
-
-- Run npm start.
-
-## Authors
+## Author
 
 👤 **Daniel Urimubenshi**
 
-- GitHub: [@benshidanny11](https://github.com/benshidanny11)
+- GitHub: [@benshidanny11](https://github.com/bensidanny11)
+- Twitter: [@DBenshi](https://twitter.com/DBenshi)
+- LinkedIn: [Daniel Urimubenshi](https://www.linkedin.com/in/danielurimubenshi/)
 
-## 🤝 Contributors
+## 🤝 Contributing
 
-- [@benshidanny11](https://github.com/benshidanny11)
+Contributions, issues, and feature requests are welcome!
 
-## Acknowledgments
+Feel free to check the [issues page](../../issues/).
 
-- [Microverse](https://www.microverse.org/)
-- [minimalist](https://web.archive.org/web/20180320194056/http://www.getminimalist.com:80/)
+## Show your support
