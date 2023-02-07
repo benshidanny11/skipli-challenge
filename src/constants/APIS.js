@@ -1,7 +1,4 @@
-const BASE_API =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:8080/api/"
-    : "https://skiplibackend.herokuapp.com/api/";
+const BASE_API ="https://skiplibackend.herokuapp.com/api/";
 const APIs = {
   SEND_ACCESS_CODE: `${BASE_API}createaccesscode`,
   VALIDATE_ACCESS_CODE: `${BASE_API}validateaccessescode`,

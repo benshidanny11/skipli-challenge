@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function App() {
   const navigate=useNavigate();
   const myPhoneNumber=localStorage.getItem("phonenumber");
-  
+  console.log(process.env.NODE_ENV)
   useEffect(()=>{
    if(myPhoneNumber){
     navigate("/")
